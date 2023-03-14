@@ -5,13 +5,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
     list-style-type: none;
     text-decoration: none;
-    outline: none;
-}
-
-body {
-    font-family: 'Poppins', sans-serif;
 }
 
 html {
@@ -37,6 +34,7 @@ html {
     background: var(--secondary-color);
     margin: 3.5rem;
     box-shadow: 0 1rem 3rem var(--gray-color);
+    overflow: hidden;
 }
 
 
@@ -45,21 +43,24 @@ html {
 ================================*/
 .header {
     width: 100%;
-    height: calc(100vh -7rem);
-    background: linear-gradient(rgba(18, 113, 255, .5), rgba(18, 113, 255, .3)), url(/assets/header-bg.jpg) center no-repeat;
+    height: calc(100vh - 7rem);
+    background: linear-gradient(rgba(18, 113, 255, .5), rgba(18, 113, 255, .3)), url(../assets/header-bg.jpg) center no-repeat;
     background-size: cover;
+    perspective: 100rem;
+    position: relative;
+    perspective: 100rem;
 }
 
 .header-text {
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 0.1rem;
-    text-shadow: 0 .3rem .5rem var(--gray-color);
+    text-shadow: 0 0.3rem 0.5rem var(--gray-color);
 }
 
 .heading {
     font-size: 8rem;
-    color: var(--white-color)
+    color: var(--white-color);
 }
 
 .header-paragraph {
@@ -120,12 +121,6 @@ html {
     animation: drop-letters 5s 0.7s infinite;
 }
 
-
-
-
-
-
-/* Logo letter drop animation */
 @keyframes drop-letters {
     0% {
         transform: translateY(0);
@@ -145,5 +140,37 @@ html {
 
     100% {
         transform: translateY(0);
+    }
+}
+
+.header-image {
+    width: 35%;
+    animation: image-float 150s infinite;
+}
+
+@keyframes image-float {
+    0% {
+        transform: translateZ(40rem);
+        opacity: 1;
+    }
+
+    40% {
+        transform: translateZ(-500rem) translateX(150rem);
+        opacity: 0.8;
+    }
+
+    70% {
+        transform: translateZ(-1500rem) translateX(800rem);
+        opacity: 0.6;
+    }
+
+    80% {
+        transform: translateZ(-50rem) translateX(100rem);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translateZ(40rem);
+        opacity: 1;
     }
 }
