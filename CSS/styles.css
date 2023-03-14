@@ -236,9 +236,7 @@ html {
     animation: drop-letters 5s 0.6s infinite;
 }
 
-.logo h1 span:nth-child(7) {
-    animation: drop-letters 5s 0.7s infinite;
-}
+
 
 @keyframes drop-letters {
     0% {
